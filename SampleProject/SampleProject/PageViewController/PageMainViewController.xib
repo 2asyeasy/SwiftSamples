@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageMainViewController" customModule="SampleProject" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="Vy4-6H-E0x" id="7Tg-Ru-rYZ"/>
+                <outlet property="downloadButton" destination="2Su-KM-59v" id="D9s-ef-cXD"/>
+                <outlet property="pageControl" destination="FcK-nh-TMa" id="h0n-9k-4Ga"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPager" destination="Nrv-o7-Bjm" id="lj2-sS-URc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy4-6H-E0x">
+                    <rect key="frame" x="317" y="16" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="qOZ-9p-251"/>
+                        <constraint firstAttribute="width" secondItem="Vy4-6H-E0x" secondAttribute="height" multiplier="1:1" id="zX9-qT-mH5"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="btn_close.png"/>
+                    <connections>
+                        <action selector="onButtonPressed:" destination="-1" eventType="touchUpInside" id="t33-wV-1JG"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FcK-nh-TMa">
+                    <rect key="frame" x="24" y="556" width="327" height="37"/>
+                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrv-o7-Bjm">
+                    <rect key="frame" x="0.0" y="58" width="375" height="498"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-KM-59v">
+                    <rect key="frame" x="166.5" y="601" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="W1N-yI-4Q9"/>
+                        <constraint firstAttribute="width" secondItem="2Su-KM-59v" secondAttribute="height" multiplier="1:1" id="i5J-oS-ap8"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="btn_download.png"/>
+                    <connections>
+                        <action selector="onButtonPressed:" destination="-1" eventType="touchUpInside" id="2VW-In-JVC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vy4-6H-E0x" secondAttribute="trailing" constant="16" id="9zx-y8-Dke"/>
+                <constraint firstItem="2Su-KM-59v" firstAttribute="top" secondItem="FcK-nh-TMa" secondAttribute="bottom" constant="8" id="HmL-dQ-23x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FcK-nh-TMa" secondAttribute="trailing" constant="24" id="NiW-uD-XIF"/>
+                <constraint firstItem="Vy4-6H-E0x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="ZbC-LY-2Yq"/>
+                <constraint firstItem="Nrv-o7-Bjm" firstAttribute="top" secondItem="Vy4-6H-E0x" secondAttribute="bottom" id="eTA-2Z-QWk"/>
+                <constraint firstItem="2Su-KM-59v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="feQ-0N-rfI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nrv-o7-Bjm" secondAttribute="trailing" id="fvC-Lg-64Z"/>
+                <constraint firstItem="FcK-nh-TMa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="k8P-y1-jCf"/>
+                <constraint firstItem="FcK-nh-TMa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pYo-AS-W7k"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Su-KM-59v" secondAttribute="bottom" constant="24" id="rjk-MP-8nK"/>
+                <constraint firstItem="Nrv-o7-Bjm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xNt-qz-m9A"/>
+                <constraint firstItem="FcK-nh-TMa" firstAttribute="top" secondItem="Nrv-o7-Bjm" secondAttribute="bottom" id="zUw-Fs-sWR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_close.png" width="28" height="28"/>
+        <image name="btn_download.png" width="63" height="63"/>
+    </resources>
+</document>
