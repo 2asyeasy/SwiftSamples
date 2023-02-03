@@ -30,16 +30,6 @@
 		EE162890247BB312005D0FEB /* btn_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE16288E247BB312005D0FEB /* btn_close@3x.png */; };
 		EE683206288930F100572634 /* AVPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE683205288930F100572634 /* AVPlayerVC.swift */; };
 		EE683208288931A100572634 /* AVPlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE683207288931A100572634 /* AVPlayerVC.xib */; };
-		EE6832162889489E00572634 /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68320B2889489E00572634 /* PassThroughView.swift */; };
-		EE6832172889489E00572634 /* NRadarViewPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68320C2889489E00572634 /* NRadarViewPort.swift */; };
-		EE6832182889489E00572634 /* NRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68320D2889489E00572634 /* NRadarView.swift */; };
-		EE6832192889489E00572634 /* NMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68320E2889489E00572634 /* NMarkerView.swift */; };
-		EE68321A2889489E00572634 /* NCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6832102889489E00572634 /* NCameraManager.swift */; };
-		EE68321B2889489E00572634 /* NLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6832122889489E00572634 /* NLocationModel.swift */; };
-		EE68321C2889489E00572634 /* NMapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6832132889489E00572634 /* NMapViewAnnotation.swift */; };
-		EE68321D2889489E00572634 /* NDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6832142889489E00572634 /* NDataSource.swift */; };
-		EE68321E2889489E00572634 /* NMarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6832152889489E00572634 /* NMarkerModel.swift */; };
-		EE683220288948FA00572634 /* SurveyItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68321F288948FA00572634 /* SurveyItemModel.swift */; };
 		EEA64122247DDCDA00C29495 /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA64120247DDCDA00C29495 /* SpeechViewController.swift */; };
 		EEA64123247DDCDA00C29495 /* SpeechViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA64121247DDCDA00C29495 /* SpeechViewController.xib */; };
 		EEA64126247DDD3E00C29495 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA64125247DDD3E00C29495 /* SpeechView.swift */; };
@@ -126,16 +116,6 @@
 		EE16288E247BB312005D0FEB /* btn_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_close@3x.png"; sourceTree = "<group>"; };
 		EE683205288930F100572634 /* AVPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerVC.swift; sourceTree = "<group>"; };
 		EE683207288931A100572634 /* AVPlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AVPlayerVC.xib; sourceTree = "<group>"; };
-		EE68320B2889489E00572634 /* PassThroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
-		EE68320C2889489E00572634 /* NRadarViewPort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRadarViewPort.swift; sourceTree = "<group>"; };
-		EE68320D2889489E00572634 /* NRadarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRadarView.swift; sourceTree = "<group>"; };
-		EE68320E2889489E00572634 /* NMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMarkerView.swift; sourceTree = "<group>"; };
-		EE6832102889489E00572634 /* NCameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCameraManager.swift; sourceTree = "<group>"; };
-		EE6832122889489E00572634 /* NLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLocationModel.swift; sourceTree = "<group>"; };
-		EE6832132889489E00572634 /* NMapViewAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMapViewAnnotation.swift; sourceTree = "<group>"; };
-		EE6832142889489E00572634 /* NDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDataSource.swift; sourceTree = "<group>"; };
-		EE6832152889489E00572634 /* NMarkerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMarkerModel.swift; sourceTree = "<group>"; };
-		EE68321F288948FA00572634 /* SurveyItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyItemModel.swift; sourceTree = "<group>"; };
 		EEA64120247DDCDA00C29495 /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		EEA64121247DDCDA00C29495 /* SpeechViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeechViewController.xib; sourceTree = "<group>"; };
 		EEA64125247DDD3E00C29495 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
@@ -234,7 +214,6 @@
 		EE162849247BA71D005D0FEB /* SampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				EE683209288947A700572634 /* Mixare */,
 				EE683204288930DF00572634 /* AVPlayer */,
 				EEA6411F247DDCC100C29495 /* Speech */,
 				EEAB7DA7247CA01A00871E24 /* ClosePixelate */,
@@ -291,47 +270,6 @@
 				EE683207288931A100572634 /* AVPlayerVC.xib */,
 			);
 			path = AVPlayer;
-			sourceTree = "<group>";
-		};
-		EE683209288947A700572634 /* Mixare */ = {
-			isa = PBXGroup;
-			children = (
-				EE68320F2889489E00572634 /* Manager */,
-				EE6832112889489E00572634 /* Model */,
-				EE68320A2889489E00572634 /* View */,
-			);
-			path = Mixare;
-			sourceTree = "<group>";
-		};
-		EE68320A2889489E00572634 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EE68320B2889489E00572634 /* PassThroughView.swift */,
-				EE68320C2889489E00572634 /* NRadarViewPort.swift */,
-				EE68320D2889489E00572634 /* NRadarView.swift */,
-				EE68320E2889489E00572634 /* NMarkerView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EE68320F2889489E00572634 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				EE6832102889489E00572634 /* NCameraManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		EE6832112889489E00572634 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EE68321F288948FA00572634 /* SurveyItemModel.swift */,
-				EE6832122889489E00572634 /* NLocationModel.swift */,
-				EE6832132889489E00572634 /* NMapViewAnnotation.swift */,
-				EE6832142889489E00572634 /* NDataSource.swift */,
-				EE6832152889489E00572634 /* NMarkerModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EEA6411F247DDCC100C29495 /* Speech */ = {
@@ -664,25 +602,15 @@
 				EE162881247BA794005D0FEB /* PageMainViewController.swift in Sources */,
 				EEAB7DAC247CA04F00871E24 /* PixelateLayer.swift in Sources */,
 				EE16284F247BA71D005D0FEB /* ViewController.swift in Sources */,
-				EE68321B2889489E00572634 /* NLocationModel.swift in Sources */,
 				EE162884247BA794005D0FEB /* PageContentViewController.swift in Sources */,
 				EE162886247BA794005D0FEB /* PageViewController.swift in Sources */,
 				EE16288B247BB0FB005D0FEB /* BaseTableViewCell.swift in Sources */,
-				EE6832172889489E00572634 /* NRadarViewPort.swift in Sources */,
 				EEAB7DAB247CA04F00871E24 /* Pixelate.swift in Sources */,
-				EE683220288948FA00572634 /* SurveyItemModel.swift in Sources */,
 				EE16284B247BA71D005D0FEB /* AppDelegate.swift in Sources */,
-				EE68321A2889489E00572634 /* NCameraManager.swift in Sources */,
 				EEAB7DAF247CA08C00871E24 /* MosaicViewController.swift in Sources */,
-				EE6832192889489E00572634 /* NMarkerView.swift in Sources */,
-				EE6832162889489E00572634 /* PassThroughView.swift in Sources */,
 				EE16284D247BA71D005D0FEB /* SceneDelegate.swift in Sources */,
 				EEA64126247DDD3E00C29495 /* SpeechView.swift in Sources */,
 				EEA64122247DDCDA00C29495 /* SpeechViewController.swift in Sources */,
-				EE68321C2889489E00572634 /* NMapViewAnnotation.swift in Sources */,
-				EE68321E2889489E00572634 /* NMarkerModel.swift in Sources */,
-				EE68321D2889489E00572634 /* NDataSource.swift in Sources */,
-				EE6832182889489E00572634 /* NRadarView.swift in Sources */,
 				EE683206288930F100572634 /* AVPlayerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,8 +785,10 @@
 			baseConfigurationReference = DC3A3C3671990E5D8531F937 /* Pods-SampleProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KSGZMKF93;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7GSB73UMP3;
 				INFOPLIST_FILE = SampleProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -870,6 +800,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.nubiz.SampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WitchesCommonDeveloper;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -881,8 +813,10 @@
 			baseConfigurationReference = DF870CA988AC254E7D130697 /* Pods-SampleProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4KSGZMKF93;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7GSB73UMP3;
 				INFOPLIST_FILE = SampleProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -894,6 +828,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.nubiz.SampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WitchesCommonDeveloper;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

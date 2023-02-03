@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarkerView" customModule="SampleProject" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="eMt-J1-bNG"/>
+                <outlet property="distanceLabel" destination="0Gg-DY-6VM" id="GF3-Sx-6E7"/>
+                <outlet property="infoBoxImageView" destination="bf8-zP-F6n" id="6dP-9a-hAN"/>
+                <outlet property="infoWindowButton" destination="GMB-tg-36T" id="x50-Wu-DwD"/>
+                <outlet property="nameLabel" destination="fM6-Mb-2fv" id="AIn-bm-XPO"/>
+                <outlet property="phoneLabel" destination="3mS-7W-mfn" id="WoZ-D3-e3m"/>
+                <outlet property="progressImageView" destination="atY-HS-3zT" id="dGf-Kq-DNP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_infobox.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-zP-F6n">
+                    <rect key="frame" x="0.0" y="10" width="333" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bf8-zP-F6n" secondAttribute="height" multiplier="111:50" id="YIu-kq-cQl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(주) 엔유비즈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM6-Mb-2fv">
+                    <rect key="frame" x="32" y="33" width="200" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☎︎ 062-714-3345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3mS-7W-mfn">
+                    <rect key="frame" x="32" y="66" width="200" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-DY-6VM">
+                    <rect key="frame" x="240" y="33" width="80" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_icon_ongoing.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atY-HS-3zT">
+                    <rect key="frame" x="0.0" y="0.0" width="66" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="7I0-6S-3eY"/>
+                        <constraint firstAttribute="width" constant="66" id="gf2-ve-lrI"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-tg-36T">
+                    <rect key="frame" x="0.0" y="0.0" width="333" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GMB-tg-36T" secondAttribute="height" multiplier="333:160" id="BWU-Bt-lOX"/>
+                    </constraints>
+                    <connections>
+                        <action selector="infoWindowPressed:" destination="-1" eventType="touchUpInside" id="Dtg-CM-4Zm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="GMB-tg-36T" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="1lw-Y1-KnL"/>
+                <constraint firstItem="atY-HS-3zT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Mhf-fn-1tg"/>
+                <constraint firstItem="bf8-zP-F6n" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="QdX-tl-hJN"/>
+                <constraint firstItem="bf8-zP-F6n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ras-Di-FeC"/>
+                <constraint firstItem="GMB-tg-36T" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="SGe-uq-rKO"/>
+                <constraint firstItem="GMB-tg-36T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Swl-dK-yUv"/>
+                <constraint firstItem="bf8-zP-F6n" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="TDP-M2-qNe"/>
+                <constraint firstItem="atY-HS-3zT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uRb-so-8Un"/>
+                <constraint firstItem="GMB-tg-36T" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="zrh-VU-en1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_icon_ongoing.png" width="44" height="22"/>
+        <image name="img_infobox.png" width="222" height="100"/>
+    </resources>
+</document>

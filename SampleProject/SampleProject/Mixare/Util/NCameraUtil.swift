@@ -1,5 +1,5 @@
 //
-//  NCameraManager.swift
+//  NCameraUtil.swift
 //  SmartEnquete
 //
 //  Created by Khai on 2018. 9. 17..
@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class NCameraManager: NSObject {
+class NCameraUtil: NSObject {
     
     var previewLayer: AVCaptureVideoPreviewLayer!
     var captureSession: AVCaptureSession!

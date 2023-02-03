@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import MobileCoreServices
+import Combine
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,14 @@ class ViewController: UIViewController {
     
     var menus: Array<String> = Array()
     
+    private func handleNumber(num: Int?) throws -> Int {
+        guard let num = num else { throw CustomError.doNotCast }
+        return num * 2
+    }
+    
+    enum CustomError: Error {
+        case doNotCast
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +41,201 @@ class ViewController: UIViewController {
         initData()
         
         initViews()
+        
+//        let publisher = [1,2,nil,3,4].publisher
+//        let cancellable = publisher
+//            .map { $0 * 2 }
+//            .sink { print(">>> \($0)") }
+//
+//        let cancellable = publisher
+//            .tryMap {
+//                try self.handleNumber(num: $0)
+//            }
+//            .sink { completion in
+//                switch completion {
+//                case .finished:
+//                    print(">>> finished")
+//                    break
+//                case .failure(let error):
+//                    print(">>> error : \(error.localizedDescription)")
+//                    break
+//                }
+//            } receiveValue: { value in
+//                print(">>> value : \(value)")
+//            }
+
+
+//        let publisher = ["ABC", "BCD", "CDE"].publisher
+//            .delay(for: 1, scheduler: DispatchQueue.main)
+//            .map {
+//                return ($0, Int.random(in: 0...99))
+//            }
+//            .print(">>> Random")
+//            .share()
+////            .multicast {
+////                PassthroughSubject<(String, Int), Never>()
+////            }
+//        let cancellable1 = publisher.sink { output in
+//            print(">>> stream 1 : \(output.0), \(output.1)")
+//        }
+//        let cancellable2 = publisher.sink { output in
+//            print(">>> stream 2 : \(output.0), \(output.1)")
+//        }
+        
+//        publisher.connect()
+        
+        
+        
+//        let publisher = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
+//        let cancellable = publisher.sink { value in
+//            print(">>> \(value)")
+//        }
+//        publisher.sink { output in
+//            print(">>> \(output)")
+//        }
+        
+//        let subject = PassthroughSubject<String, Error>()
+//        let subscriber = subject.handleEvents(receiveSubscription: { subscription in
+//            print(">>> subscription")
+//        }, receiveOutput: { output in
+//            print(">>> output")
+//        }, receiveCompletion: { completion in
+//            print(">>> completion")
+//        }, receiveCancel: {
+//            print(">>> cancel")
+//        }, receiveRequest: { request in
+//            print(">>> request")
+//        }).sink { completion in
+//            switch completion {
+//            case .finished:
+//                print(">>> finished")
+//                break
+//            case .failure(let error):
+//                print(">>> error : \(error)")
+//                break
+//            }
+//            print(">>> completion")
+//        } receiveValue: { value in
+//            print(">>> value : \(value)")
+//        }
+//
+//        subject.send("Test")
+//        subscriber.cancel()
+        
+//        let subject = PassthroughSubject<String, Never>()
+//        let subscriber = TestSubscriber()
+//        subject.print().subscribe(subscriber)
+//        subscriber.subscription = CustomSubscription({
+//            print(">>> cancelled")
+//        })
+//
+//        subject.send("Khai")
+//        subject.send("Khai")
+//
+//        subscriber.subscription?.cancel()
+        
+//        let publisher = ["Zedd"].publisher
+//        publisher
+//            .map { _ in print(Thread.isMainThread) }
+//            .receive(on: DispatchQueue.global())
+//            .map { _ in print(Thread.isMainThread) }
+//            .sink { _ in print(Thread.isMainThread) }
+        
+//        let publisher = CurrentValueSubject<String, Never>("Zedd")
+//
+//        publisher
+//            .subscribe(on: DispatchQueue.global())
+//            .sink { _ in print(">>> sink : \(Thread.isMainThread)") }
+        
+        
+        
+//        enum CustomError: Error {
+//            case unknown
+//        }
+//
+//        let passthroughSubject = PassthroughSubject<String, Error>()
+//        let subscriber = passthroughSubject.sink { completion in
+//            switch completion {
+//            case .finished:
+//                print(">>> finished")
+//                break
+//            case .failure(let error):
+//                print(">>> \(error.localizedDescription)")
+//                break
+//            }
+//        } receiveValue: { value in
+//            print(">>> value : \(value)")
+//        }
+//
+//        passthroughSubject.send("Hi")
+//        passthroughSubject.send("Zedd")
+//
+//        passthroughSubject.send(completion: .failure(CustomError.unknown))
+//        passthroughSubject.send(completion: .finished)
+//        passthroughSubject.send(">>> New")
+
+        
+//        let passthroughSubject = PassthroughSubject<String, Never>()
+//        let subscriber = passthroughSubject.sink { result in
+//            print(">>> \(result)")
+//        }
+//        passthroughSubject.send("Hi")
+//        passthroughSubject.send("Zedd")
+        
+//        let currentValueSubject = CurrentValueSubject<String, Never>("Zedd")
+//        let subscriber = currentValueSubject.sink { value in
+//            print(">>> \(value)")
+//        }
+//        currentValueSubject.value = "Hi"
+//        currentValueSubject.send("Hi")
+        
+//        let publisher = ["Khai", "Sive", "Root", "Admin", "Master"].publisher
+//        publisher.print().subscribe(TestSubscriber())
+        
+//        let subject = PassthroughSubject<String, Never>()
+//        let subscriber = TestSubscriber()
+//        subject.print().subscribe(subscriber)
+//
+//        subject.send("Khai")
+//        subject.send("Sive")
+//        subject.send("Root")
+//        subject.send("Admin")
+//        subject.send("Master")
+//
+//        subject.send(completion: .finished)
+//
+//        subscriber.subscription?.request(.max(2))
+//
+//        subject.send("Avicii")
+//        subject.send("LANY")
+//        subject.send("Cash Cash")
+        
+//        ["test1", "test2", "test3"].publisher.sink { value in
+//            print(">>> \(value)")
+//        }
+
+        
+//        let pubilsher = Just("test")
+//        let subscriber = pubilsher.sink { value in
+//            print(">>> \(value)")
+//        }
+//
+//        let subsciber = pubilsher.sink { result in
+//            switch result {
+//            case .finished:
+//                print(">>> finished")
+//                break
+//            case .failure(let error):
+//                print(error)
+//                break
+//            }
+//        } receiveValue: { value in
+//            print(">>> \(value)")
+//        }
+        
+//        Task(priority: TaskPriority.background) {
+//            await self.process()
+//        }
     }
     
     func initData() -> Void {
@@ -45,7 +249,110 @@ class ViewController: UIViewController {
     func initViews() -> Void {
         initTableView()
     }
+    
+    func getData() async throws -> Data {
+        let url = URL(string: "http://www.witches.kr/")!
+        
+        //  Synchronous URL loading...
+        //let data = try Data(contentsOf: url)
+        //  Asynchronous URL loading
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return data
+    }
+    
+    func decode(data: Data) async throws -> String {
+        let contents = String(data: data, encoding: String.Encoding.utf8)!
+        return contents
+    }
+    
+    func process() async {
+        do {
+            let data = try await self.getData()
+            let contents = try await self.decode(data: data)
+            print(contents)
+        }
+        catch {
+            print(error)
+        }
+    }
 
+}
+
+final class CustomSubscription: Subscription {
+    
+    private let cancellable: Cancellable
+    
+    init(_ cancel: @escaping () -> Void) {
+        self.cancellable = AnyCancellable(cancel)
+    }
+    
+    func request(_ demand: Subscribers.Demand) {
+        
+    }
+    
+    func cancel() {
+        self.cancellable.cancel()
+    }
+}
+
+class TestSubscriber: Subscriber {
+    
+    typealias Input = String
+    typealias Failure = Never
+    
+    var subscription: Subscription?
+
+    func receive(subscription: Subscription) {
+        //subscription.request(.unlimited)
+        subscription.request(.max(1))
+        self.subscription = subscription
+    }
+    
+    func receive(_ input: String) -> Subscribers.Demand {
+        switch input {
+        case "Khai":
+            return .max(2)
+        default:
+            return .none
+        }
+//        return .none
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {
+
+    }
+}
+
+struct ItemLoader {
+    var session = URLSession.shared
+    
+//    func loadItems(from url: URL) async throws -> [Item] {
+//        let (data, _) = try await session.data(from: url)
+//        let decoder = JSONDecoder()
+//        return try decoder.decode([Item].self, from: data)
+//    }
+}
+
+struct FileLoader {
+    var session = URLSession.shared
+    
+//    func downloadFile(from url: URL) async throws -> File {
+//        let (localUrl, _) = try await session.download(from: url)
+//        return File(url: localUrl)
+//    }
+}
+
+struct FileUploader {
+    var session = URLSession.shared
+
+//    func upload(_ data: Data, to url: URL) async throws -> URLResponse {
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//
+//        let (resposneData, response) = try await session.upload(for: request, from: data)
+//
+//        return response
+//    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

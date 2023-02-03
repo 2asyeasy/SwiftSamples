@@ -14,7 +14,6 @@ import QuartzCore
 
 class MixareVC: UIViewController {
 
-    @IBOutlet var titleView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var mapButton: UIButton!
     @IBOutlet var markerInfoView: UIView!
@@ -26,7 +25,7 @@ class MixareVC: UIViewController {
     let INFOWINDOW_WIDTH: Double = 333.0
     let INFOWINDOW_HEIGHT: Double = 150.0
 
-    var nCameraManager = NCameraManager()
+    var nCameraManager = NCameraUtil()
     var locationManager: CLLocationManager = CLLocationManager.init()
     var motionManager: CMMotionManager = CMMotionManager.init()
 
@@ -57,11 +56,6 @@ class MixareVC: UIViewController {
 
         // Do any additional setup after loading the view.        
         initialize()
-    }
-
-    override func viewDidLayoutSubviews() {
-        titleView.initWithTitle(NSLocalizedString("STRING_APP", comment: ""), backButtonVisible: true)
-        titleView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -126,7 +120,7 @@ class MixareVC: UIViewController {
     
 }
 
-extension MixareVC: TitleViewDelegate, MarkerInfoViewDelegate {
+extension MixareVC: MarkerInfoViewDelegate {
     //  MARK: - TitleViewDelegate
     func backButtonPressed() {
         isBack = true
@@ -138,9 +132,7 @@ extension MixareVC: TitleViewDelegate, MarkerInfoViewDelegate {
     }
     
     func researchButtonPressed(_ uuid: String) {
-        appDelegate.currentResearchModel.target = uuid
-        let viewController = SurveyViewController(nibName: "SurveyViewController", bundle: nil)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
 }
@@ -236,18 +228,20 @@ extension MixareVC: NMarkerViewDelegate {
             markerInfoView = MarkerInfoView()
         }
         var distanceString = ""
-        if let currentLocation = appDelegate.currentLocation,
-            let lat = model.lat,
-            let lng = model.lng {
-            
-            let distance = currentLocation.distance(from: CLLocation.init(latitude: lat, longitude: lng))
-            if distance > 1000 {
-                distanceString = String.init(format: "%.3f km", Float(Int(round(distance))) / 1000)
-            }
-            else {
-                distanceString = String.init(format: "%d m", Int(round(distance)))
-            }
-        }
+        
+        //  locationManager
+//        if let currentLocation = appDelegate.currentLocation,
+//            let lat = model.lat,
+//            let lng = model.lng {
+//            
+//            let distance = currentLocation.distance(from: CLLocation.init(latitude: lat, longitude: lng))
+//            if distance > 1000 {
+//                distanceString = String.init(format: "%.3f km", Float(Int(round(distance))) / 1000)
+//            }
+//            else {
+//                distanceString = String.init(format: "%d m", Int(round(distance)))
+//            }
+//        }
         
         markerInfoView.setData(model.name!, model.phone, distanceString)
         markerInfoView.frame = CGRect(x: 0, y: 0, width: markerInfoView.frame.width * appDelegate.displayRatio.width, height: markerInfoView.frame.height * appDelegate.displayRatio.height)
